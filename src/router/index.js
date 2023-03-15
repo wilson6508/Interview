@@ -31,6 +31,13 @@ const routes = [
         },
     },
     {
+        path: "/FlowChart",
+        component: () => import("@/components/project/FlowChart.vue"),
+        meta: {
+            title: "FlowChart"
+        },
+    },
+    {
         path: "/SourceCode",
         component: () => import("@/components/project/SourceCode.vue"),
         meta: {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" v-model="apiUrl" />
+    <input type="text" v-model="stockId" />
     <button @click="test">OK</button>
   </div>
 </template>
@@ -9,16 +9,16 @@
 import axios from "axios";
 
 export default {
-  name: "SourceCode",
+  name: "FlowChart",
   data() {
     return {
-      apiUrl: "",
+      stockId: "",
     }
   },
   methods: {
     test() {
-      console.log(this.apiUrl);
-      axios.get(this.apiUrl)
+      const uri = `/stockPrice/getSingle?stockId=${this.stockId}`;
+      axios.get('/api' + uri)
           .then(response => {
             console.log(response.data);
           })

@@ -1,9 +1,7 @@
 <template>
   <div>
     <Navigation />
-    <keep-alive include="FlowChart">
-      <router-view />
-    </keep-alive>
+    <router-view />
   </div>
 </template>
 

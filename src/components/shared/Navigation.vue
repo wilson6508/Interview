@@ -51,6 +51,7 @@ export default {
       routesArr: [
         { label: "架構圖", path: "/Structure", children: [] },
         { label: "功能頁", path: "/StockPrice", children: [] },
+        { label: "流程圖", path: "/FlowChart", children: [] },
         { label: "程式碼", path: "/SourceCode", children: [] },
       ],
     };
