@@ -6,33 +6,17 @@
           <div v-for="(item, itemIndex) in routesArr" :key="itemIndex">
             <!--無children-->
             <li v-if="item.children.length === 0" class="me-2">
-              <router-link
-                class="nav-link"
-                active-class="active"
-                style="color: white"
-                :to="item.path"
-                >{{ item.label }}</router-link
-              >
+              <router-link class="nav-link" active-class="active" style="color: white" :to="item.path">{{ item.label
+              }}</router-link>
             </li>
             <!--有children-->
             <li v-else class="nav-item dropdown me-2">
-              <a
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                :style="`color: ${isChild(item.children)}`"
-                >{{ item.label }}</a
-              >
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" :style="`color: ${isChild(item.children)}`">{{
+                item.label }}</a>
               <ul class="dropdown-menu">
-                <li
-                  v-for="(child, childIndex) in item.children"
-                  :key="childIndex"
-                >
-                  <router-link
-                    class="dropdown-item"
-                    active-class="active"
-                    :to="child.path"
-                    >{{ child.label }}</router-link
-                  >
+                <li v-for="(child, childIndex) in item.children" :key="childIndex">
+                  <router-link class="dropdown-item" active-class="active" :to="child.path">{{ child.label
+                  }}</router-link>
                 </li>
               </ul>
             </li>
@@ -53,6 +37,12 @@ export default {
         { label: "功能頁", path: "/StockPrice", children: [] },
         { label: "流程圖", path: "/FlowChart", children: [] },
         { label: "程式碼", path: "/SourceCode", children: [] },
+        {
+          label: "nginx", path: "", children: [
+            { label: "Command", path: "/nginx/Command" },
+            { label: "ReverseProxy", path: "/nginx/ReverseProxy" },
+          ]
+        },
       ],
     };
   },
@@ -74,9 +64,11 @@ export default {
 li {
   cursor: pointer;
 }
+
 a {
   cursor: pointer;
 }
+
 .active {
   color: yellow !important;
   /* background-color: #0d6efd !important; */

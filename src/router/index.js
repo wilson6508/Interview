@@ -44,6 +44,21 @@ const routes = [
             title: "SourceCode"
         },
     },
+    // nginx
+    {
+        path: "/nginx/Command",
+        component: () => import("@/views/nginx/Command.vue"),
+        meta: {
+            title: "Command"
+        },
+    },
+    {
+        path: "/nginx/ReverseProxy",
+        component: () => import("@/views/nginx/ReverseProxy.vue"),
+        meta: {
+            title: "ReverseProxy"
+        },
+    },      
 ];
 
 const router = new VueRouter({
@@ -53,7 +68,7 @@ const router = new VueRouter({
 });
 
 router.afterEach((to) => {
-    document.title = to.meta.title || "VueTwoDemo";
+    document.title = to.meta.title || "Interview";
 })
 
 export default router;
