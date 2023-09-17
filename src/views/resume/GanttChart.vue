@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: "Structure",
+  name: "GanttChart",
 };
 </script>

@@ -4,44 +4,24 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
 const routes = [
+    // resume
     {
         path: "/",
         redirect: {
-            path: "/Structure",
+            path: "/resume/GanttChart",
         },
     },
     {
         path: "*",
         redirect: {
-            path: "/Structure",
+            path: "/resume/GanttChart",
         },
     },
     {
-        path: "/Structure",
-        component: () => import("@/components/project/Structure.vue"),
+        path: "/resume/GanttChart",
+        component: () => import("@/views/resume/GanttChart.vue"),
         meta: {
-            title: "Structure"
-        },
-    },
-    {
-        path: "/StockPrice",
-        component: () => import("@/components/project/StockPrice.vue"),
-        meta: {
-            title: "StockPrice"
-        },
-    },
-    {
-        path: "/FlowChart",
-        component: () => import("@/components/project/FlowChart.vue"),
-        meta: {
-            title: "FlowChart"
-        },
-    },
-    {
-        path: "/SourceCode",
-        component: () => import("@/components/project/SourceCode.vue"),
-        meta: {
-            title: "SourceCode"
+            title: "GanttChart"
         },
     },
     // nginx

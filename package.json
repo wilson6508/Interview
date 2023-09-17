@@ -5,21 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "serve:dev": "vue-cli-service serve --mode dev",
-    "build:dev": "vue-cli-service build --mode dev",
-    "test": "jest"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.26.1",
     "bootstrap": "^5.1.3",
     "core-js": "^3.6.5",
-    "jsplumb": "^2.15.6",
-    "nanoid": "^3.3.4",
     "vue": "^2.6.11",
     "vue-code-highlight": "^0.7.8",
-    "vue-router": "^3.5.4",
-    "vuedraggable": "^2.24.3"
+    "vue-router": "^3.5.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.13",
@@ -28,9 +21,6 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "highcharts": "^9.3.3",
-    "highcharts-vue": "^1.4.0",
-    "jest": "^28.1.3",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
