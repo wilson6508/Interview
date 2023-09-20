@@ -38,10 +38,20 @@ export default {
             { label: "GanttChart", path: "/resume/GanttChart" },
           ]
         },
+        { 
+          label: "linux", path: "", children: [
+            { label: "SshAgent", path: "/linux/SshAgent" },
+          ]
+        },
         {
           label: "nginx", path: "", children: [
             { label: "Command", path: "/nginx/Command" },
             { label: "ReverseProxy", path: "/nginx/ReverseProxy" },
+          ]
+        },
+        { 
+          label: "docker", path: "", children: [
+            { label: "Compose", path: "/docker/Compose" },
           ]
         },
       ],

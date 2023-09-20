@@ -24,6 +24,14 @@ const routes = [
             title: "GanttChart"
         },
     },
+    // linux
+    {
+        path: "/linux/SshAgent",
+        component: () => import("@/views/linux/SshAgent.vue"),
+        meta: {
+            title: "SshAgent"
+        },
+    },    
     // nginx
     {
         path: "/nginx/Command",
@@ -38,7 +46,15 @@ const routes = [
         meta: {
             title: "ReverseProxy"
         },
-    },      
+    },
+    // docker
+    {
+        path: "/docker/Compose",
+        component: () => import("@/views/docker/Compose.vue"),
+        meta: {
+            title: "Compose"
+        },
+    },    
 ];
 
 const router = new VueRouter({
