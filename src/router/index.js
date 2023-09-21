@@ -54,7 +54,14 @@ const routes = [
         meta: {
             title: "Compose"
         },
-    },    
+    },
+    {
+        path: "/docker/Dockerfile",
+        component: () => import("@/views/docker/Dockerfile.vue"),
+        meta: {
+            title: "Dockerfile"
+        },
+    },
 ];
 
 const router = new VueRouter({

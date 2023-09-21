@@ -1,9 +1,9 @@
 <template>
-    <div>
-      <div class="row m-4">
-        <div class="col-md-8 col-12">
-          <CodeContainer :title="''">
-            <template v-slot:sourceCode>
+  <div>
+    <div class="row m-4">
+      <div class="col-md-8 col-12">
+        <CodeContainer :title="''">
+          <template v-slot:sourceCode>
               <pre>
 # 安裝ssh-agent指令
 command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )
@@ -20,20 +20,20 @@ ssh-keyscan 10.10.10.99 >> ~/.ssh/known_hosts # 寫入一次即可
 # 下指令
 ssh user@10.10.10.99 "cat /etc/hostname"
                 </pre>
-            </template>
-          </CodeContainer>
-        </div>
+          </template>
+        </CodeContainer>
       </div>
     </div>
-  </template>
-  
-  <script>
-  import CodeContainer from "@/components/shared/CodeContainer.vue";
-  
-  export default {
-    name: "SshAgent.vue",
-    components: {
-      CodeContainer,
-    },
-  };
-  </script>
+  </div>
+</template>
+
+<script>
+import CodeContainer from "@/components/shared/CodeContainer.vue";
+
+export default {
+  name: "SshAgent",
+  components: {
+    CodeContainer,
+  },
+};
+</script>

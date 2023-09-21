@@ -52,6 +52,7 @@ export default {
         { 
           label: "docker", path: "", children: [
             { label: "Compose", path: "/docker/Compose" },
+            { label: "Dockerfile", path: "/docker/Dockerfile" },
           ]
         },
       ],

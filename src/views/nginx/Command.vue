@@ -36,7 +36,7 @@ cd /usr/local/nginx/sbin
 import CodeContainer from "@/components/shared/CodeContainer.vue";
 
 export default {
-  name: "Command.vue",
+  name: "Command",
   components: {
     CodeContainer,
   },
