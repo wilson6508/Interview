@@ -40,6 +40,10 @@ export default {
         },
         { 
           label: "linux", path: "", children: [
+            { label: "ConExp", path: "/linux/ConExp" },
+            { label: "Awk", path: "/linux/Awk" },
+            { label: "Cut", path: "/linux/Cut" },
+            { label: "Envsubst", path: "/linux/Envsubst" },
             { label: "SshAgent", path: "/linux/SshAgent" },
           ]
         },
@@ -51,8 +55,9 @@ export default {
         },
         { 
           label: "docker", path: "", children: [
-            { label: "Compose", path: "/docker/Compose" },
             { label: "Dockerfile", path: "/docker/Dockerfile" },
+            { label: "Compose", path: "/docker/Compose" },
+            { label: "Flow", path: "/docker/Flow" },
           ]
         },
       ],

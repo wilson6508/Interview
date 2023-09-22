@@ -26,12 +26,40 @@ const routes = [
     },
     // linux
     {
+        path: "/linux/ConExp",
+        component: () => import("@/views/linux/ConExp.vue"),
+        meta: {
+            title: "ConExp"
+        },
+    },
+    {
+        path: "/linux/Awk",
+        component: () => import("@/views/linux/Awk.vue"),
+        meta: {
+            title: "Awk"
+        },
+    },
+    {
+        path: "/linux/Cut",
+        component: () => import("@/views/linux/Cut.vue"),
+        meta: {
+            title: "Cut"
+        },
+    },
+    {
+        path: "/linux/Envsubst",
+        component: () => import("@/views/linux/Envsubst.vue"),
+        meta: {
+            title: "Envsubst"
+        },
+    },
+    {
         path: "/linux/SshAgent",
         component: () => import("@/views/linux/SshAgent.vue"),
         meta: {
             title: "SshAgent"
         },
-    },    
+    },
     // nginx
     {
         path: "/nginx/Command",
@@ -60,6 +88,13 @@ const routes = [
         component: () => import("@/views/docker/Dockerfile.vue"),
         meta: {
             title: "Dockerfile"
+        },
+    },
+    {
+        path: "/docker/Flow",
+        component: () => import("@/views/docker/Flow.vue"),
+        meta: {
+            title: "Flow"
         },
     },
 ];
