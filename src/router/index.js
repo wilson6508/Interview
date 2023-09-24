@@ -40,6 +40,13 @@ const routes = [
         },
     },
     {
+        path: "/linux/Sed",
+        component: () => import("@/views/linux/Sed.vue"),
+        meta: {
+            title: "Sed"
+        },
+    },
+    {
         path: "/linux/Cut",
         component: () => import("@/views/linux/Cut.vue"),
         meta: {
@@ -95,6 +102,21 @@ const routes = [
         component: () => import("@/views/docker/Flow.vue"),
         meta: {
             title: "Flow"
+        },
+    },
+    // gitlab
+    {
+        path: "/gitlab/Preparatory",
+        component: () => import("@/views/gitlab/Preparatory.vue"),
+        meta: {
+            title: "Preparatory"
+        },
+    },
+    {
+        path: "/gitlab/Rules",
+        component: () => import("@/views/gitlab/Rules.vue"),
+        meta: {
+            title: "Rules"
         },
     },
 ];
