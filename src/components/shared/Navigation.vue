@@ -65,6 +65,8 @@ export default {
           label: "gitlab", path: "", children: [
             { label: "Preparatory", path: "/gitlab/Preparatory" },
             { label: "Rules", path: "/gitlab/Rules" },
+            { label: "Override1", path: "/gitlab/Override1" },
+            { label: "Override2", path: "/gitlab/Override2" },
           ]
         },
       ],

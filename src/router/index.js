@@ -84,10 +84,10 @@ const routes = [
     },
     // docker
     {
-        path: "/docker/Compose",
-        component: () => import("@/views/docker/Compose.vue"),
+        path: "/docker/Flow",
+        component: () => import("@/views/docker/Flow.vue"),
         meta: {
-            title: "Compose"
+            title: "Flow"
         },
     },
     {
@@ -98,10 +98,10 @@ const routes = [
         },
     },
     {
-        path: "/docker/Flow",
-        component: () => import("@/views/docker/Flow.vue"),
+        path: "/docker/Compose",
+        component: () => import("@/views/docker/Compose.vue"),
         meta: {
-            title: "Flow"
+            title: "Compose"
         },
     },
     // gitlab
@@ -117,6 +117,20 @@ const routes = [
         component: () => import("@/views/gitlab/Rules.vue"),
         meta: {
             title: "Rules"
+        },
+    },
+    {
+        path: "/gitlab/Override1",
+        component: () => import("@/views/gitlab/Override1.vue"),
+        meta: {
+            title: "Override1"
+        },
+    },
+    {
+        path: "/gitlab/Override2",
+        component: () => import("@/views/gitlab/Override2.vue"),
+        meta: {
+            title: "Override2"
         },
     },
 ];
