@@ -38,13 +38,19 @@ export default {
             { label: "GanttChart", path: "/resume/GanttChart" },
           ]
         },
+        {
+          label: "springboot", path: "", children: [
+            { label: "Log", path: "/springboot/Log" },
+          ]
+        },
         { 
           label: "linux", path: "", children: [
-            { label: "ConExp", path: "/linux/ConExp" },
             { label: "Awk", path: "/linux/Awk" },
-            { label: "Sed", path: "/linux/Sed" },
+            { label: "ConExp", path: "/linux/ConExp" },
             { label: "Cut", path: "/linux/Cut" },
             { label: "Envsubst", path: "/linux/Envsubst" },
+            { label: "FileDir", path: "/linux/FileDir" },
+            { label: "Sed", path: "/linux/Sed" },
             { label: "SshAgent", path: "/linux/SshAgent" },
           ]
         },

@@ -24,14 +24,15 @@ const routes = [
             title: "GanttChart"
         },
     },
-    // linux
+    // springboot
     {
-        path: "/linux/ConExp",
-        component: () => import("@/views/linux/ConExp.vue"),
+        path: "/springboot/Log",
+        component: () => import("@/views/springboot/Log.vue"),
         meta: {
-            title: "ConExp"
+            title: "Log"
         },
     },
+    // linux
     {
         path: "/linux/Awk",
         component: () => import("@/views/linux/Awk.vue"),
@@ -40,10 +41,10 @@ const routes = [
         },
     },
     {
-        path: "/linux/Sed",
-        component: () => import("@/views/linux/Sed.vue"),
+        path: "/linux/ConExp",
+        component: () => import("@/views/linux/ConExp.vue"),
         meta: {
-            title: "Sed"
+            title: "ConExp"
         },
     },
     {
@@ -58,6 +59,20 @@ const routes = [
         component: () => import("@/views/linux/Envsubst.vue"),
         meta: {
             title: "Envsubst"
+        },
+    },
+    {
+        path: "/linux/FileDir",
+        component: () => import("@/views/linux/FileDir.vue"),
+        meta: {
+            title: "FileDir"
+        },
+    },
+    {
+        path: "/linux/Sed",
+        component: () => import("@/views/linux/Sed.vue"),
+        meta: {
+            title: "Sed"
         },
     },
     {
