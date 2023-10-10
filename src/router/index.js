@@ -32,6 +32,20 @@ const routes = [
             title: "Log"
         },
     },
+    {
+        path: "/springboot/MyBatis",
+        component: () => import("@/views/springboot/MyBatis.vue"),
+        meta: {
+            title: "MyBatis"
+        },
+    },
+    {
+        path: "/springboot/MyBatisPlus",
+        component: () => import("@/views/springboot/MyBatisPlus.vue"),
+        meta: {
+            title: "MyBatisPlus"
+        },
+    },
     // linux
     {
         path: "/linux/Awk",
@@ -95,6 +109,14 @@ const routes = [
         component: () => import("@/views/nginx/ReverseProxy.vue"),
         meta: {
             title: "ReverseProxy"
+        },
+    },
+    // redis
+    {
+        path: "/redis/BitMap",
+        component: () => import("@/views/redis/BitMap.vue"),
+        meta: {
+            title: "BitMap"
         },
     },
     // docker

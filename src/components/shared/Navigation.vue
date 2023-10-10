@@ -41,6 +41,8 @@ export default {
         {
           label: "springboot", path: "", children: [
             { label: "Log", path: "/springboot/Log" },
+            { label: "MyBatis", path: "/springboot/MyBatis" },
+            { label: "MyBatisPlus", path: "/springboot/MyBatisPlus" },
           ]
         },
         { 
@@ -60,7 +62,12 @@ export default {
             { label: "ReverseProxy", path: "/nginx/ReverseProxy" },
           ]
         },
-        { 
+        {
+          label: "redis", path: "", children: [
+            { label: "BitMap", path: "/redis/BitMap" },
+          ]
+        },
+        {
           label: "docker", path: "", children: [
             { label: "Dockerfile", path: "/docker/Dockerfile" },
             { label: "Compose", path: "/docker/Compose" },
