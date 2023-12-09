@@ -8,13 +8,13 @@ const routes = [
     {
         path: "/",
         redirect: {
-            path: "/resume/GanttChart",
+            path: "/springboot/MyBatis",
         },
     },
     {
         path: "*",
         redirect: {
-            path: "/resume/GanttChart",
+            path: "/springboot/MyBatis",
         },
     },
     {
