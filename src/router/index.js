@@ -170,6 +170,14 @@ const routes = [
             title: "Override2"
         },
     },
+    // eland
+    {
+        path: "/eland/Jsch",
+        component: () => import("@/views/eland/Jsch.vue"),
+        meta: {
+            title: "Jsch"
+        },
+    },
 ];
 
 const router = new VueRouter({

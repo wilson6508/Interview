@@ -82,6 +82,11 @@ export default {
             { label: "Override2", path: "/gitlab/Override2" },
           ]
         },
+        {
+          label: "第二份工作", path: "", children: [
+            { label: "Jsch", path: "/eland/Jsch" },
+          ]
+        },
       ],
     };
   },
