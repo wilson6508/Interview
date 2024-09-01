@@ -178,6 +178,13 @@ const routes = [
             title: "Jsch"
         },
     },
+    {
+        path: "/eland/Scp",
+        component: () => import("@/views/eland/Scp.vue"),
+        meta: {
+            title: "Scp"
+        },
+    },
 ];
 
 const router = new VueRouter({

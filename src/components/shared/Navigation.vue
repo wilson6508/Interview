@@ -85,6 +85,7 @@ export default {
         {
           label: "第二份工作", path: "", children: [
             { label: "Jsch", path: "/eland/Jsch" },
+            { label: "Scp", path: "/eland/Scp" },
           ]
         },
       ],
