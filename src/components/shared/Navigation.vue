@@ -33,11 +33,13 @@ export default {
   data() {
     return {
       routesArr: [
-        // {
-        //   label: "resume", path: "", children: [
-        //     { label: "GanttChart", path: "/resume/GanttChart" },
-        //   ]
-        // },
+        {
+          label: "resume", path: "", children: [
+            { label: "GanttChart", path: "/resume/GanttChart" },
+            { label: "Home", path: "/resume/Home" },
+            { label: "Self", path: "/resume/Self" },
+          ]
+        },
         {
           label: "springboot", path: "", children: [
             { label: "Log", path: "/springboot/Log" },

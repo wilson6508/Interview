@@ -8,13 +8,13 @@ const routes = [
     {
         path: "/",
         redirect: {
-            path: "/springboot/MyBatis",
+            path: "/resume/Home",
         },
     },
     {
         path: "*",
         redirect: {
-            path: "/springboot/MyBatis",
+            path: "/resume/Home",
         },
     },
     {
@@ -22,6 +22,20 @@ const routes = [
         component: () => import("@/views/resume/GanttChart.vue"),
         meta: {
             title: "GanttChart"
+        },
+    },
+    {
+        path: "/resume/Home",
+        component: () => import("@/views/resume/Home.vue"),
+        meta: {
+            title: "Home"
+        },
+    },
+    {
+        path: "/resume/Self",
+        component: () => import("@/views/resume/Self.vue"),
+        meta: {
+            title: "Self"
         },
     },
     // springboot
