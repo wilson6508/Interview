@@ -52,8 +52,7 @@ export default {
             { label: "Awk", path: "/linux/Awk" },
             { label: "ConExp", path: "/linux/ConExp" },
             { label: "Cut", path: "/linux/Cut" },
-            { label: "Envsubst", path: "/linux/Envsubst" },
-            { label: "FileDir", path: "/linux/FileDir" },
+            { label: "Deployment", path: "/linux/Deployment" },
             { label: "Sed", path: "/linux/Sed" },
             { label: "SshAgent", path: "/linux/SshAgent" },
           ]

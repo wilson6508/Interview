@@ -83,17 +83,10 @@ const routes = [
         },
     },
     {
-        path: "/linux/Envsubst",
-        component: () => import("@/views/linux/Envsubst.vue"),
+        path: "/linux/Deployment",
+        component: () => import("@/views/linux/Deployment.vue"),
         meta: {
-            title: "Envsubst"
-        },
-    },
-    {
-        path: "/linux/FileDir",
-        component: () => import("@/views/linux/FileDir.vue"),
-        meta: {
-            title: "FileDir"
+            title: "Deployment"
         },
     },
     {

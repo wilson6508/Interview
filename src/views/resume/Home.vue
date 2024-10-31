@@ -14,115 +14,34 @@
       <div class="col-4"></div>
     </div>
     <div class="row m-4">
-      <div class="col-3">
+      <div class="col-3" v-for="(item, itemIndex) in firstRowArr" :key="itemIndex">
         <div class="card">
-          <div class="card-header">自我介紹</div>
+          <div class="card-header">{{item.header}}</div>
           <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="card-header">自我介紹</div>
-          <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="card-header">自我介紹</div>
-          <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="card-header">自我介紹</div>
-          <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
+            <p class="card-text">{{item.text}}</p>
+            <a class="btn btn-success" @click="goToPage(item.path)">查看</a>
           </div>
         </div>
       </div>
     </div>
     <div class="row m-4">
-      <div class="col-3">
+      <div class="col-3" v-for="(item, itemIndex) in firstRowArr" :key="itemIndex">
         <div class="card">
-          <div class="card-header">自我介紹</div>
+          <div class="card-header">{{item.header}}</div>
           <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="card-header">自我介紹</div>
-          <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="card-header">自我介紹</div>
-          <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="card-header">自我介紹</div>
-          <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
+            <p class="card-text">{{item.text}}</p>
+            <a class="btn btn-primary" @click="goToPage(item.path)">查看</a>
           </div>
         </div>
       </div>
     </div>
     <div class="row m-4">
-      <div class="col-3">
+      <div class="col-3" v-for="(item, itemIndex) in firstRowArr" :key="itemIndex">
         <div class="card">
-          <div class="card-header">自我介紹</div>
+          <div class="card-header">{{item.header}}</div>
           <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="card-header">自我介紹</div>
-          <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="card-header">自我介紹</div>
-          <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="card-header">自我介紹</div>
-          <div class="card-body">
-            <p class="card-text">包含工作經驗、學歷以及一些證照。</p>
-            <a class="btn btn-success" @click="goToPage('/resume/Self')">查看自我介紹</a>
+            <p class="card-text">{{item.text}}</p>
+            <a class="btn btn-secondary" @click="goToPage(item.path)">查看</a>
           </div>
         </div>
       </div>
@@ -133,6 +52,15 @@
 <script>
 export default {
   name: "Home",
+  data() {
+    return {
+      firstRowArr: [
+        { header: "自我介紹", text: "包含工作經驗、學歷以及一些證照。", path: "/resume/Self" },
+        { header: "簡易自動化部署", text: "包含ShellScript、docker、Git Hooks。", path: "/linux/Deployment" }
+      ],
+      secondRowArr: []
+    };
+  },
   methods: {
     goToPage(path) {
       this.$router.push(path);
