@@ -50,7 +50,6 @@ export default {
         { 
           label: "linux", path: "", children: [
             { label: "Awk", path: "/linux/Awk" },
-            { label: "ConExp", path: "/linux/ConExp" },
             { label: "Cut", path: "/linux/Cut" },
             { label: "Deployment", path: "/linux/Deployment" },
             { label: "Sed", path: "/linux/Sed" },
@@ -60,6 +59,7 @@ export default {
         {
           label: "nginx", path: "", children: [
             { label: "Command", path: "/nginx/Command" },
+            { label: "Download", path: "/nginx/Download" },
             { label: "ReverseProxy", path: "/nginx/ReverseProxy" },
           ]
         },

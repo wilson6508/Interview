@@ -69,13 +69,6 @@ const routes = [
         },
     },
     {
-        path: "/linux/ConExp",
-        component: () => import("@/views/linux/ConExp.vue"),
-        meta: {
-            title: "ConExp"
-        },
-    },
-    {
         path: "/linux/Cut",
         component: () => import("@/views/linux/Cut.vue"),
         meta: {
@@ -109,6 +102,13 @@ const routes = [
         component: () => import("@/views/nginx/Command.vue"),
         meta: {
             title: "Command"
+        },
+    },
+    {
+        path: "/nginx/Download",
+        component: () => import("@/views/nginx/Download.vue"),
+        meta: {
+            title: "Download"
         },
     },
     {
