@@ -58,6 +58,7 @@ export default {
         { header: "自我介紹", text: "包含工作經驗、學歷以及一些證照。", path: "/resume/Self" },
         { header: "簡易自動化部署", text: "包含ShellScript、Docker、Git Hooks。", path: "/linux/Deployment" },
         { header: "下載檔案", text: "包含Nginx、Docker。", path: "/nginx/Download" },
+        { header: "一次性密碼", text: "Redis的使用。", path: "/redis/String" },
       ],
       secondRowArr: []
     };

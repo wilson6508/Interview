@@ -66,6 +66,7 @@ export default {
         {
           label: "redis", path: "", children: [
             { label: "BitMap", path: "/redis/BitMap" },
+            { label: "String", path: "/redis/String" },
           ]
         },
         {

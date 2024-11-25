@@ -126,6 +126,13 @@ const routes = [
             title: "BitMap"
         },
     },
+    {
+        path: "/redis/String",
+        component: () => import("@/views/redis/String.vue"),
+        meta: {
+            title: "String"
+        },
+    },
     // docker
     {
         path: "/docker/Flow",
