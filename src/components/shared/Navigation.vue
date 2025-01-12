@@ -42,6 +42,7 @@ export default {
         },
         {
           label: "springboot", path: "", children: [
+            { label: "Api", path: "/springboot/Api" },
             { label: "Log", path: "/springboot/Log" },
             { label: "MyBatis", path: "/springboot/MyBatis" },
             { label: "MyBatisPlus", path: "/springboot/MyBatisPlus" },

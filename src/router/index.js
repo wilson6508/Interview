@@ -40,6 +40,13 @@ const routes = [
     },
     // springboot
     {
+        path: "/springboot/Api",
+        component: () => import("@/views/springboot/Api.vue"),
+        meta: {
+            title: "Api"
+        },
+    },
+    {
         path: "/springboot/Log",
         component: () => import("@/views/springboot/Log.vue"),
         meta: {

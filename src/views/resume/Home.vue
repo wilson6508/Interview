@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="row m-4">
-      <div class="col-3" v-for="(item, itemIndex) in firstRowArr" :key="itemIndex">
+      <div class="col-3" v-for="(item, itemIndex) in secondRowArr" :key="itemIndex">
         <div class="card">
           <div class="card-header">{{item.header}}</div>
           <div class="card-body">
@@ -60,7 +60,9 @@ export default {
         { header: "下載檔案", text: "包含Nginx、Docker。", path: "/nginx/Download" },
         { header: "一次性密碼", text: "Redis的使用。", path: "/redis/String" },
       ],
-      secondRowArr: []
+      secondRowArr: [
+        { header: "Api接口", text: "Api接口撰寫。", path: "/springboot/Api" },
+      ]
     };
   },
   methods: {
