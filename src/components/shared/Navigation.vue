@@ -92,7 +92,7 @@ export default {
           ]
         },
         {
-          label: "問題思考", path: "", children: [
+          label: "問題集", path: "", children: [
             { label: "資料庫瘦身", path: "/qa/ShrinkDb" },
           ]
         },

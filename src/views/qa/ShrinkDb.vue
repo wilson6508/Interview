@@ -92,7 +92,8 @@ export default {
   },
   methods: {
     openFile(dirName, fileName) {
-      window.open(`/${dirName}/${fileName}`, '_blank');
+      const baseUrl = process.env.BASE_URL;
+      window.open(`${baseUrl}${dirName}/${fileName}`, '_blank');
     }
   },
 };
