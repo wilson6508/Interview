@@ -1,0 +1,107 @@
+匯出指令
+FIELDS TERMINATED BY ','：指定字段之間的分隔符，這裡使用逗號。
+OPTIONALLY ENCLOSED BY '"'：指定字段值的包圍符，這裡使用雙引號。
+LINES TERMINATED BY '\n'：指定行結束符，這裡使用換行符。
+
+匯出整個表的結構和資料
+mysqldump -u root -p1234 itheima tb_online --where="id > 10" > /var/lib/mysql-files/tb_online.sql
+
+下方待查
+mysqlimport --ignore-lines=1 --fields-terminated-by=, --local -u root -p1234 itheima /var/lib/mysql-files/tb_online.sql
+------------------------------------------------------------------------------------------------------------------------
+mysql匯出跟引入檔案的資料夾
+
+SHOW VARIABLES LIKE 'secure_file_priv';
+
+The directory where MySQL is allowed to read from or write to files.
+If the option is set to NULL, file operations are completely disabled.
+If the option is not set (or set to an empty string),
+MySQL allows file operations in any directory
+(though this is not recommended for security reasons).
+
+locate my.cnf
+cat my.cnf
+
+[mysqld]
+secure-file-priv = /path/to/your/directory
+
+[mysqld]
+secure-file-priv = ""
+------------------------------------------------------------------------------------------------------------------------
+指令參數
+
+-D (specify the database directly)
+-N (skip column names)
+-s (silent)
+-e (execute the query)
+
+mysql -u root -p1234 -D itheima -Nse "SELECT COUNT(*) FROM tb_online;"
+------------------------------------------------------------------------------------------------------------------------
+寫成腳本自啟動
+
+01 20 * * * /root/test.sh >> /root/test.sh.log 2>&1
+
+#!/bin/bash
+
+MYSQL_USER="root"
+MYSQL_PASSWORD="1234"
+MYSQL_DATABASE="itheima"
+
+mysql -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE <<EOF
+-- 保留在線上資料庫的
+SELECT *
+INTO OUTFILE '/var/lib/mysql-files/tb_online.csv'
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+FROM tb_online
+WHERE id > 10;
+-- 進到歷史資料庫的
+SELECT *
+INTO OUTFILE '/var/lib/mysql-files/tb_online_bk.csv'
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+FROM tb_online
+WHERE NOT (id > 10);
+EOF
+
+if [ $? -ne 0 ]; then
+    echo "Error"
+    exit 1
+fi
+
+COUNT_TOTAL=$(mysql -u "$MYSQL_USER" -p"$MYSQL_PASSWORD" -D "$MYSQL_DATABASE" -Nse "SELECT COUNT(*) FROM tb_online;")
+COUNT_RES=$(wc -l < /var/lib/mysql-files/tb_online.csv)
+COUNT_ARC=$(wc -l < /var/lib/mysql-files/tb_online_bk.csv)
+echo "COUNT_TOTAL = $COUNT_TOTAL"
+echo "COUNT_RES = $COUNT_RES"
+echo "COUNT_ARC = $COUNT_ARC"
+
+if (( COUNT_TOTAL != COUNT_RES + COUNT_ARC )); then
+    echo "Error"
+    exit 1
+fi
+
+mysql -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE <<EOF
+-- 寫入歷史資料庫
+LOAD DATA INFILE '/var/lib/mysql-files/tb_online_bk.csv'
+INTO TABLE tb_online_bk
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+-- 清空線上的資料表
+truncate tb_online;
+-- 寫回線上資料庫
+LOAD DATA INFILE '/var/lib/mysql-files/tb_online.csv'
+INTO TABLE tb_online
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+EOF
+
+if [ $? -ne 0 ]; then
+    echo "Error"
+    exit 1
+fi
+------------------------------------------------------------------------------------------------------------------------
