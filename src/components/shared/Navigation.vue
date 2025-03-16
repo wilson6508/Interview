@@ -91,6 +91,11 @@ export default {
             { label: "Scp", path: "/eland/Scp" },
           ]
         },
+        {
+          label: "問題思考", path: "", children: [
+            { label: "資料庫瘦身", path: "/qa/ShrinkDb" },
+          ]
+        },
       ],
     };
   },

@@ -36,12 +36,12 @@
       </div>
     </div>
     <div class="row m-4">
-      <div class="col-3" v-for="(item, itemIndex) in firstRowArr" :key="itemIndex">
+      <div class="col-3" v-for="(item, itemIndex) in thirdRowArr" :key="itemIndex">
         <div class="card">
           <div class="card-header">{{item.header}}</div>
           <div class="card-body">
             <p class="card-text">{{item.text}}</p>
-            <a class="btn btn-secondary" @click="goToPage(item.path)">查看</a>
+            <a class="btn btn-dark" @click="goToPage(item.path)">查看</a>
           </div>
         </div>
       </div>
@@ -62,7 +62,10 @@ export default {
       ],
       secondRowArr: [
         { header: "Api接口", text: "Api接口撰寫。", path: "/springboot/Api" },
-      ]
+      ],
+      thirdRowArr: [
+        { header: "資料庫瘦身", text: "資料庫瘦身", path: "/qa/ShrinkDb" },
+      ],
     };
   },
   methods: {

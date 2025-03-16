@@ -206,6 +206,14 @@ const routes = [
             title: "Scp"
         },
     },
+    // qa
+    {
+        path: "/qa/ShrinkDb",
+        component: () => import("@/views/qa/ShrinkDb.vue"),
+        meta: {
+            title: "ShrinkDb"
+        },
+    },
 ];
 
 const router = new VueRouter({
